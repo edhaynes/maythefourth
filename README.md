@@ -2,8 +2,11 @@ StarWars ASCII movie
 =============================
 derived from github nitram509/ascii-telnet-server
 credits:
+
 Original art work : Simon Jansen http://www.asciimation.co.nz/
+
 Telnetification & Player coding : Martin W. Kirst
+:wq
 Python3 Update: Ryan Jarvis Dockerfile contributed by: Manuel Eusebio de Paz Carmona
 
 
