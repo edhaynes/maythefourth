@@ -23,4 +23,7 @@ Simply build & run the container.  sw1.text is set as default movie file in Cont
     # with the default movie
     $> podman run -it --rm -e mode=stdout ascii-art-movie-telnet-player
     
+    #as a standalone
+    podman run -it --rm -p 9023:23 -e mode=standalone ascii-art-movie-telnet-player
+    
  
