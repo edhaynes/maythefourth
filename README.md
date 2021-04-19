@@ -37,3 +37,11 @@ systemctl enable --user star_wars_server.service
 systemctl start --user star_wars_server.service
 systemctl status --user star_wars_server.service
 ``` 
+Cleanup / remove systemd service
+-----------------------
+```
+systemctl --user stop star_wars_server.service
+systemctl --user disable star_wars_server.service
+rm -f ~/.config/systemd/user/star_wars_server.service
+podman stop star_wars_server
+podman rm star_wars_server
