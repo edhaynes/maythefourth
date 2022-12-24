@@ -24,12 +24,12 @@ Simply build & run the container.  sw1.text is set as default movie file in Cont
     $> podman run -it --rm -e mode=stdout ascii-art-movie-telnet-player
     
     #as a standalone
-    podman run -it --rm -p 9023:23 -e mode=standalone ascii-art-movie-telnet-player
+    podman run -d --rm -p 8023:8023 -e mode=standalone ascii-art-movie-telnet-player
     
 Run as systemd service
 -----------------------
 ```
-podman create --name star_wars_server -e mode=standalone -p 9023:23 ascii-art-movie-telnet-player
+podman create --name star_wars_server -e mode=standalone -p 8023:8023 ascii-art-movie-telnet-player
 podman generate systemd star_wars_server --restart-policy=always -t 5 -f -n
 mkdir -p ~/.config/systemd/user
 cp ./container-star_wars_server.service ~/.config/systemd/user/star_wars_server.service

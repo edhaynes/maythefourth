@@ -107,7 +107,7 @@ if __name__ == "__main__":
     parser.add_option("-q", "--quiet", action="store_false", dest="verbose",
                       help="Quiet! (default for STDIN STDOUT server)")
     parser.set_defaults(interface="0.0.0.0",
-                        port=23,
+                        port=8023,
                         tcpserv=True,
                         verbose=True, )
     options = parser.parse_args()[0]

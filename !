@@ -5,6 +5,7 @@ RUN whoami
 USER root
 
 RUN yum -y install bash
+RUN useradd -ms /bin/bash user1
 
 ENV mode stdout
 ENV input_file sample_movies/sw1.txt
@@ -13,13 +14,10 @@ RUN mkdir /app
 WORKDIR /app
 COPY . /app
 
-RUN useradd -ms /bin/bash user1
-
 RUN chown -R user1:user1 /app
 
 EXPOSE 23
 
 USER user1
-
 
 CMD python ascii_telnet_server.py --$mode -f $input_file && echo ""
