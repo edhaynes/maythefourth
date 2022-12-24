@@ -1,7 +1,5 @@
 FROM registry.access.redhat.com/ubi8/python-38
 
-RUN whoami
-
 USER root
 
 RUN yum -y install bash
